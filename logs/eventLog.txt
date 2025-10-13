@@ -1,0 +1,8 @@
+Time: 08/10 [2025]	10:31:40 | EventID: 9fa0bcc0-fff7-4402-935b-b00e1dc350e0
+Test message
+Time: 08/10 [2025] - 10:31:56 | EventID: 80992170-a80b-4e34-b594-a5f62b5f8bff
+Test message
+Time: 08/10 [2025] @ 10:32:09 | EventID: 1c6e9041-dffd-4930-8247-b3eccb99d31c
+Test message
+Time: 08/10 [2025] @ 10:49:45 | EventID: 8d51d8bb-09ea-4ba7-b17c-055f039fa886
+Something happened.
