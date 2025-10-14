@@ -6,8 +6,8 @@ const express = require("express");
 const cors = require("cors");
 
 // First Party/Middleware
-const { logger } = require("./middleware/logEvents");
-const errorHandler = require("./middleware/errorHandler");
+const { logger } = require("./middleware/logEvents.js");
+const errorHandler = require("./middleware/errorHandler.js");
 const corsOptions = require("./config/corsOptions.js");
 
 const app = express();
@@ -22,7 +22,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/", require("./routes/root.js"));
-app.use("/employees", require("./routes/api/employees"));
+app.use("/employees", require("./routes/api/employees.js"));
+app.use("/register", require("./routes/register.js"));
 
 app.get(/\/*/, (req, res) => {
   res.status(404);
