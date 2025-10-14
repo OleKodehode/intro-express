@@ -1,0 +1,8 @@
+Time: 14/10 [2025] @ 09:19:52 | EventID: b14a04fa-37df-4662-b4f4-0f13bac19766
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 09:20:52 | EventID: 0f18cb34-f3e1-40dc-b27e-d06d4c8e370e
+POST	undefined	/employees/
+Time: 14/10 [2025] @ 09:21:03 | EventID: 5b991057-2175-4448-9426-b5e33ab7f06d
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 09:21:14 | EventID: d9963178-c689-44c0-b90e-71e908c974fb
+POST	undefined	/employees/
