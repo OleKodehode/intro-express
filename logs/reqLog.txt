@@ -6,3 +6,43 @@ Time: 14/10 [2025] @ 09:21:03 | EventID: 5b991057-2175-4448-9426-b5e33ab7f06d
 GET	undefined	/employees/
 Time: 14/10 [2025] @ 09:21:14 | EventID: d9963178-c689-44c0-b90e-71e908c974fb
 POST	undefined	/employees/
+Time: 14/10 [2025] @ 09:26:10 | EventID: c4a660ec-6d91-40a0-8698-70d6c0da638f
+PUT	undefined	/employees/
+Time: 14/10 [2025] @ 09:26:24 | EventID: c651ddf5-d2fb-467d-8dd4-e4974ada190b
+PUT	undefined	/employees/
+Time: 14/10 [2025] @ 09:27:30 | EventID: 5087920e-07dd-49ff-adc2-4f489152f603
+PUT	undefined	/employees/
+Time: 14/10 [2025] @ 09:28:50 | EventID: 180d2cf5-fbde-4d47-a5c0-784a12661f2d
+DELETE	undefined	/employees/
+Time: 14/10 [2025] @ 09:54:56 | EventID: 8ef48e65-8f48-4783-94d0-6e760d51453e
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 09:55:15 | EventID: fdb8fa37-36e1-4a8f-9685-c3c65547dd31
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 09:55:45 | EventID: 8e5d434f-07f3-4342-99c6-14b482a2c5e4
+POST	undefined	/employees/
+Time: 14/10 [2025] @ 09:56:26 | EventID: 03a708a5-4146-46d6-b139-176e04ecc41d
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 10:04:10 | EventID: 93f1b84f-5f4f-4033-afad-8e74d5fadd2b
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 10:10:10 | EventID: 61fa0a9d-c50d-4046-a342-0c62445bbf92
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 10:10:16 | EventID: e0fcfaf4-889b-4308-b6b9-2e03b04b3c0e
+POST	undefined	/employees/
+Time: 14/10 [2025] @ 10:10:27 | EventID: f43a392a-5cdb-43f0-af06-e7c4ce1e4ff3
+PUT	undefined	/employees/
+Time: 14/10 [2025] @ 10:10:32 | EventID: 21416ce6-c78a-4428-834f-daf79c16c2a8
+DELETE	undefined	/employees/
+Time: 14/10 [2025] @ 10:10:40 | EventID: c75e4d10-c695-4cc1-b04f-77b2b2510889
+GET	undefined	/employees/1
+Time: 14/10 [2025] @ 10:13:29 | EventID: 89e81570-19bd-409b-a87b-9129411f1e3f
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 10:16:03 | EventID: 56bc3991-755c-45fb-80d7-cd61c0ea1614
+GET	undefined	/employees/
+Time: 14/10 [2025] @ 10:16:07 | EventID: 42076aee-0188-4e0b-bd97-51d6ca4f0fdf
+POST	undefined	/employees/
+Time: 14/10 [2025] @ 10:16:13 | EventID: e1d58ac9-0da2-4c2d-8535-09a862eb7f4b
+PUT	undefined	/employees/
+Time: 14/10 [2025] @ 10:16:16 | EventID: df055d82-2b12-48cc-887b-7283b7221983
+DELETE	undefined	/employees/
+Time: 14/10 [2025] @ 10:16:20 | EventID: a20d09e7-66cf-46a3-b79f-c5abf9ae7b90
+GET	undefined	/employees/2
