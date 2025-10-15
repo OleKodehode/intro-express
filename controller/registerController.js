@@ -1,6 +1,6 @@
 const usersDB = {
   users: require("../model/users.json"),
-  setUsers: (data) => {
+  setUsers: function (data) {
     this.users = data;
   },
 };
