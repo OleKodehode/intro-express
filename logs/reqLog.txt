@@ -78,3 +78,7 @@ Time: 16/10 [2025] @ 09:16:17 | EventID: 95432f0c-86cf-4443-86a2-1404419600f2
 POST	undefined	/auth
 Time: 16/10 [2025] @ 09:16:21 | EventID: 1f69a036-63f2-45bc-ab40-42d9f0b12958
 POST	undefined	/auth
+Time: 16/10 [2025] @ 10:25:41 | EventID: b6711241-86c3-4d87-9357-eb1ea6475e42
+POST	undefined	/auth
+Time: 16/10 [2025] @ 10:25:49 | EventID: b6d668b6-e0c4-41ec-890b-7a34bdc16379
+GET	undefined	/employees/
