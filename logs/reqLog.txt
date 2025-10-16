@@ -72,3 +72,9 @@ Time: 14/10 [2025] @ 10:56:07 | EventID: 84b5d792-4c79-478c-a0f3-409ef42e9a7a
 POST	undefined	/register
 Time: 14/10 [2025] @ 11:10:25 | EventID: 344252a2-be2c-47d1-8968-3352d26b9ae3
 POST	undefined	/register
+Time: 16/10 [2025] @ 09:16:12 | EventID: 704d976d-7b58-411c-9141-04715005c8d4
+POST	undefined	/auth
+Time: 16/10 [2025] @ 09:16:17 | EventID: 95432f0c-86cf-4443-86a2-1404419600f2
+POST	undefined	/auth
+Time: 16/10 [2025] @ 09:16:21 | EventID: 1f69a036-63f2-45bc-ab40-42d9f0b12958
+POST	undefined	/auth
