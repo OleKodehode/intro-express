@@ -1,9 +1,4 @@
-const usersDB = {
-  users: require("../model/users.json"),
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
+z;
 
 const fsPromises = require("fs").promises;
 const path = require("path");
@@ -21,7 +16,11 @@ const handleNewUser = async (req, res) => {
 
   try {
     const hashedPwd = await bcrypt.hash(pwd, 10);
-    const newUser = { username: user, password: hashedPwd };
+    const newUser = {
+      username: user,
+      password: hashedPwd,
+      roles: { User: 1111 },
+    };
 
     usersDB.setUsers([...usersDB.users, newUser]);
 
