@@ -94,3 +94,15 @@ Time: 23/10 [2025] @ 09:44:27 | EventID: 35d0e3e1-a64f-46fb-ab5e-e83474756958
 GET	undefined	/employees/
 Time: 23/10 [2025] @ 09:45:21 | EventID: 8c4558c2-d5dc-4e0d-b10c-0298024dc18c
 GET	undefined	/employees/
+Time: 23/10 [2025] @ 14:51:44 | EventID: 9fc65083-dc73-47d7-b300-b204fd1f2765
+POST	undefined	/employees/
+Time: 23/10 [2025] @ 14:55:37 | EventID: 0a194815-d9b5-4e6f-88ba-091909c3ff51
+POST	undefined	/employees/
+Time: 23/10 [2025] @ 14:56:37 | EventID: 99cd1b9b-e43d-4659-af4b-3fe93ca26f31
+POST	undefined	/employees/
+Time: 23/10 [2025] @ 14:57:26 | EventID: 57335d89-4a0f-4f94-9f13-7702364a8700
+POST	undefined	/employees/addEmployee
+Time: 23/10 [2025] @ 14:58:07 | EventID: 4add9ec2-1b22-479a-9e97-74cc192fcacf
+POST	undefined	/employees/
+Time: 23/10 [2025] @ 14:58:32 | EventID: 45d6e456-009b-4157-be92-92228155d714
+POST	undefined	/employees/

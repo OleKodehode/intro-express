@@ -13,7 +13,7 @@ const {
   handleDeleteEmployee,
 } = require("../../controller/employeesSqlController");
 
-router.post("./addEmployee", handleAddEmployee);
+router.post("/", handleAddEmployee);
 router.get("/", handleGetAllEmployees);
 router.get("/:id", handleGetEmployeeByID);
 router.put("/:id", handleUpdateEmployee);

@@ -5,6 +5,8 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const http = require("http");
+const { Server } = require("socket.io");
 
 // First Party/Middleware
 const { logger } = require("./middleware/logEvents.js");
@@ -15,6 +17,8 @@ const verifyJWT = require("./middleware/verifyJWT.js");
 const db = require("./database/database.js");
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
 
 app.use(logger);
 app.use(errorHandler);
@@ -47,7 +51,19 @@ app.get(/\/*/, (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+io.on("connection", (socket) => {
+  console.log("WebSocket connected - ", socket.id);
+
+  socket.on("chatMessage", (msg) => {
+    io.emit("chatMessage", msg);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("WebSocket disconnected.");
+  });
+});
+
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 process.on("SIGINT", () => {
   try {

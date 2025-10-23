@@ -8,6 +8,7 @@ const {
 
 const handleAddEmployee = (req, res) => {
   const { first_name, last_name, job_title } = req.body;
+  console.log("Foo");
 
   if (!first_name || !last_name || !job_title) {
     return res.status(400).json({ error: "All fields are required" });
