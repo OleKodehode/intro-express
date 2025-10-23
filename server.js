@@ -33,7 +33,7 @@ app.use("/auth", require("./routes/auth.js"));
 app.use("/refresh", require("./routes/refresh.js"));
 app.use("/logout", require("./routes/logout.js"));
 
-app.use(verifyJWT);
+// app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees.js"));
 
 app.get(/\/*/, (req, res) => {
@@ -48,3 +48,14 @@ app.get(/\/*/, (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+process.on("SIGINT", () => {
+  try {
+    db.close();
+    console.log("Database Closed.");
+  } catch (err) {
+    console.error("Failed to close the Database: ", err.message);
+  } finally {
+    process.exit(0);
+  }
+});
