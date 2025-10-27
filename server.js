@@ -39,6 +39,8 @@ app.use("/logout", require("./routes/logout.js"));
 
 // app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees.js"));
+app.use("/chat", require("./routes/chatRoute.js"));
+app.use("/projects", require("./routes/projects.js"));
 
 app.get(/\/*/, (req, res) => {
   res.status(404);
@@ -55,7 +57,13 @@ io.on("connection", (socket) => {
   console.log("WebSocket connected - ", socket.id);
 
   socket.on("chatMessage", (msg) => {
-    io.emit("chatMessage", msg);
+    const user = socket.user?.userName || "Anonymous";
+    console.log("Message Recieved: ", msg);
+    io.emit("chatMessage", { user, message: msg });
+  });
+
+  socket.on("sendNotification", (msg) => {
+    io.emit("notification", msg);
   });
 
   socket.on("disconnect", () => {
@@ -63,7 +71,9 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () =>
+  console.log(`Server running on port ${PORT} \t - \t http://localhost:${PORT}`)
+);
 
 process.on("SIGINT", () => {
   try {
