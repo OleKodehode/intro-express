@@ -162,3 +162,13 @@ Time: 27/10 [2025] @ 11:20:45 | EventID: 79331372-9cb6-4383-8741-788dfb9fd45f
 GET	undefined	/
 Time: 27/10 [2025] @ 13:16:53 | EventID: 20d85629-b451-47b7-9b86-241739d3ebd8
 GET	undefined	/
+Time: 27/10 [2025] @ 14:46:08 | EventID: 2b27001e-34f9-465d-9250-6ee677a2f3ee
+GET	undefined	/
+Time: 27/10 [2025] @ 14:46:08 | EventID: 9243468d-5ec9-49b9-98f5-549523c80ef3
+GET	undefined	/css/style.css
+Time: 27/10 [2025] @ 14:46:13 | EventID: 662c3f02-8d74-4829-bfc2-4e0e6185cf02
+GET	undefined	/chat
+Time: 27/10 [2025] @ 14:46:13 | EventID: f9b1bbab-9656-443f-93ec-12105bcf6bcb
+GET	undefined	/css/chat.css
+Time: 27/10 [2025] @ 14:46:13 | EventID: f546eb1c-01ea-49c4-9441-34ab1346296a
+GET	undefined	/JS/chat.js
