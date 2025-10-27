@@ -5,32 +5,32 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const http = require("http");
-const { Server } = require("socket.io");
 
 // First Party/Middleware
 const { logger } = require("./middleware/logEvents.js");
 const errorHandler = require("./middleware/errorHandler.js");
 const corsOptions = require("./config/corsOptions.js");
 const verifyJWT = require("./middleware/verifyJWT.js");
-
 const db = require("./database/database.js");
 
 const app = express();
+
+const http = require("http");
+const { Server } = require("socket.io");
+
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(logger);
-app.use(errorHandler);
-
-app.use(cors(corsOptions));
-
+// Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(logger);
 app.use(cookieParser);
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(cors(corsOptions));
 
 // Routes
+//public
 app.use("/", require("./routes/root.js"));
 app.use("/register", require("./routes/register.js"));
 app.use("/auth", require("./routes/auth.js"));
@@ -39,8 +39,9 @@ app.use("/logout", require("./routes/logout.js"));
 
 // app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees.js"));
-app.use("/chat", require("./routes/chatRoute.js"));
+app.use("/chat", require("./routes/chat.js"));
 app.use("/projects", require("./routes/projects.js"));
+app.use("/skills", require("./routes/employeeSkills.js"));
 
 app.get(/\/*/, (req, res) => {
   res.status(404);
@@ -52,6 +53,8 @@ app.get(/\/*/, (req, res) => {
     res.type({ error: "404 - Text not found" });
   }
 });
+
+app.use(errorHandler);
 
 io.on("connection", (socket) => {
   console.log("WebSocket connected - ", socket.id);

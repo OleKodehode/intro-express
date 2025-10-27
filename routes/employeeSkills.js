@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const getProjectsWithEmployees = require("../queries/projectsWithEmployees.js");
+const getEmployeeSkills = require("../queries/employeesWithSkills.js");
 
 router.get("/", (req, res) => {
-  const data = getProjectsWithEmployees();
+  const data = getEmployeeSkills();
   res.json(data);
 });
 

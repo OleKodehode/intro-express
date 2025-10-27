@@ -1,4 +1,4 @@
-const database = require("../database/database.js");
+const db = require("../database/database.js");
 
 function getProjectsWithEmployees() {
   return db
