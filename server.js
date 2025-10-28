@@ -1,3 +1,5 @@
+// environment
+require("dotenv").config;
 const PORT = process.env.PORT || 3500;
 
 // Third Party
@@ -5,6 +7,7 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const helmet = require("helmet");
 
 // First Party/Middleware
 const { logger } = require("./middleware/logEvents.js");
@@ -12,6 +15,7 @@ const errorHandler = require("./middleware/errorHandler.js");
 const corsOptions = require("./config/corsOptions.js");
 const verifyJWT = require("./middleware/verifyJWT.js");
 const db = require("./database/database.js");
+const rateLimiter = require("./middleware/rateLimiter.js");
 
 const app = express();
 
@@ -26,8 +30,10 @@ app.use(logger);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(helmet());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(cors(corsOptions));
+app.use("/", rateLimiter);
 
 // Routes
 //public
