@@ -37,4 +37,24 @@ db.prepare(
   foreign key (skill_id) references skills(id))`
 ).run();
 
+db.prepare(
+  `create index if not exists idx_projects_employee_id
+  on projects (employee_id)`
+).run();
+
+db.prepare(
+  `create index if not exists idx_employee_skills_employee_id
+  on employee_skills (employee_id)`
+).run();
+
+db.prepare(
+  `create index if not exists idx_projects_project_name
+  on projects (project_name)`
+).run();
+
+db.prepare(
+  `create index if not exists idx_skills_name
+  on skills (name)`
+).run();
+
 module.exports = db;
