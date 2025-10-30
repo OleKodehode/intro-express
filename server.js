@@ -19,6 +19,15 @@ const rateLimiter = require("./middleware/rateLimiter.js");
 
 const app = express();
 
+if (process.env.NODE_ENV === "production") {
+  const rateLimit = require("express-rate-limiter");
+
+  const rateLimiter = ratelimit({ windowMS: 15 * 60 * 1000, max: 100 });
+
+  app.use(helmet());
+  app.use(rateLimiter);
+}
+
 const http = require("http");
 const { Server } = require("socket.io");
 
@@ -30,7 +39,6 @@ app.use(logger);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(helmet());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(cors(corsOptions));
 app.use("/", rateLimiter);
